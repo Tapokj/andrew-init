@@ -1,0 +1,116 @@
+Certainly! Here's a comprehensive Git cheat sheet with the most commonly used Git commands:
+
+```markdown
+# Git Cheat Sheet
+
+## Setup and Configuration
+```bash
+git config --global user.name "[name]"
+git config --global user.email "[email address]"
+git config --list
+```
+
+## Creating Repositories
+```bash
+git init
+git clone [url]
+```
+
+## Making Changes
+```bash
+git status
+git add [file]
+git add .
+git commit -m "[commit message]"
+git commit -am "[commit message]"  # Add and commit in one step
+git rm [file]
+git mv [file-original] [file-renamed]
+```
+
+## Branching and Merging
+```bash
+git branch
+git branch [branch-name]
+git checkout [branch-name]
+git checkout -b [branch-name]  # Create and switch to new branch
+git merge [branch]
+git mergetool  # Use configured merge tool to resolve conflicts
+git branch -d [branch-name]  # Delete branch
+```
+
+## Stashing
+```bash
+git stash
+git stash list
+git stash pop
+git stash drop
+```
+
+## Reviewing History
+```bash
+git log
+git log --oneline
+git log --graph --oneline --decorate
+git diff
+git diff --staged
+git blame [file]
+```
+
+## Undoing Changes
+```bash
+git reset [file]
+git reset --hard [commit]
+git revert [commit]
+```
+
+## Remote Repositories
+```bash
+git remote add [alias] [url]
+git remote -v
+git fetch [alias]
+git pull
+git push [alias] [branch]
+git push -u origin [branch]  # Set upstream branch
+```
+
+## Tags
+```bash
+git tag
+git tag [tag-name]
+git tag -a [tag-name] -m "[tag message]"
+git push --tags
+```
+
+## Advanced
+```bash
+git rebase [branch]
+git cherry-pick [commit]
+git submodule add [url] [path]
+git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
+```
+
+## Plumbing Commands
+```bash
+git cat-file -p [SHA]
+git ls-tree [branch-name]
+git rev-parse [branch-name]
+git reflog
+```
+
+## Cleaning
+```bash
+git clean -n  # Dry run
+git clean -f  # Force clean untracked files
+git clean -fd  # Force clean untracked files and directories
+```
+```
+
+This cheat sheet covers a wide range of Git commands, from basic to advanced. Remember that Git is a powerful 
+tool with many options and flags for each command. For more detailed information on any specific command, you 
+can always use:
+
+```bash
+git help [command]
+```
+
+Or visit the official Git documentation for comprehensive explanations and examples.
